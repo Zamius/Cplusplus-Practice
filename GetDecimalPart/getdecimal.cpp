@@ -7,9 +7,6 @@ std::vector<double> rVect();
 
 int main()
 {
-    //Initialize random seed
-    srand(time(NULL));
-
 
     std::vector<double> testNumbers{ 25.87, 1.777, 13.85, 222.9432};
     DoubleDigits* worker = new DoubleDigits();
