@@ -55,13 +55,14 @@ int main()
 	//Load words else
 	wordslist profanity = swears(filePtr);
 	
-	bool not_found{ true };
+	bool not_found{};
 	//Main
 	while (1)
 	{
 		cout << PROMPT;
 		getline(std::cin >> std::ws, sentence);
 		
+		not_found = true;
 		for (auto w : profanity)
 		{
 			if (toLower(sentence).find(w) != string::npos)
@@ -69,11 +70,6 @@ int main()
 				cout << "\nFound profanity!!!\n" << endl;
 				not_found = false;
 				break;
-			}
-
-			else
-			{
-				not_found = true;
 			}
 		}
 
